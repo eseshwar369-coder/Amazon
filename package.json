@@ -9,8 +9,9 @@
     "start:prod": "node src/main.js"
   },
   "dependencies": {
-    "apify": "^3.2.6",
-    "crawlee": "^3.11.5"
+    "apify": "^3.7.2",
+    "crawlee": "^3.18.0",
+    "playwright": "^1.62.1"
   },
   "engines": {
     "node": ">=18.0.0"

@@ -55,6 +55,19 @@
       "default": "amazon.in",
       "enum": ["amazon.in", "amazon.com", "amazon.co.uk"],
       "enumTitles": ["amazon.in", "amazon.com", "amazon.co.uk"]
+    },
+    "useApifyProxy": {
+      "title": "Use Apify Proxy",
+      "type": "boolean",
+      "description": "Strongly recommended. Amazon blocks/CAPTCHAs a lot of traffic that doesn't come through a proxy. Turn off only for quick local testing.",
+      "default": true
+    },
+    "proxyGroups": {
+      "title": "Proxy Groups (optional)",
+      "type": "array",
+      "description": "Leave empty to let Apify choose automatically. If you have Residential Proxy on your plan, set this to [\"RESIDENTIAL\"] for the most reliable results on Amazon.",
+      "editor": "stringList",
+      "default": []
     }
   },
   "required": ["searchQuery"]
