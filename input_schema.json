@@ -1,0 +1,61 @@
+{
+  "title": "Amazon Product Scraper Input",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "searchQuery": {
+      "title": "Search Query",
+      "type": "string",
+      "description": "Product name, keyword, or ingredient to search for on Amazon (e.g. \"whey protein\").",
+      "editor": "textfield",
+      "prefill": "whey protein"
+    },
+    "maxProducts": {
+      "title": "Maximum Products",
+      "type": "integer",
+      "description": "Maximum number of products to scrape across all search-result pages.",
+      "default": 50,
+      "minimum": 1,
+      "maximum": 1000
+    },
+    "minimumSales": {
+      "title": "Minimum Sales",
+      "type": "integer",
+      "description": "Minimum sales_numeric (from Amazon's own \"bought in past month\" indicator) required to pass the filter. Leave default if unsure.",
+      "default": 5000,
+      "minimum": 0
+    },
+    "minimumRating": {
+      "title": "Minimum Rating",
+      "type": "number",
+      "description": "Minimum star rating (out of 5) required to pass the filter.",
+      "default": 3.5,
+      "minimum": 0,
+      "maximum": 5
+    },
+    "minimumReviews": {
+      "title": "Minimum Reviews",
+      "type": "integer",
+      "description": "Minimum review count required to pass the filter.",
+      "default": 100,
+      "minimum": 0
+    },
+    "maximumReviews": {
+      "title": "Maximum Reviews",
+      "type": "integer",
+      "description": "Maximum review count allowed to pass the filter.",
+      "default": 150,
+      "minimum": 0
+    },
+    "amazonDomain": {
+      "title": "Amazon Domain",
+      "type": "string",
+      "description": "Which Amazon marketplace to search.",
+      "editor": "select",
+      "default": "amazon.in",
+      "enum": ["amazon.in", "amazon.com", "amazon.co.uk"],
+      "enumTitles": ["amazon.in", "amazon.com", "amazon.co.uk"]
+    }
+  },
+  "required": ["searchQuery"]
+}

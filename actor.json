@@ -1,0 +1,10 @@
+{
+  "actorSpecification": 1,
+  "name": "amazon-product-scraper",
+  "title": "Amazon Product Scraper (MVP)",
+  "description": "Search Amazon by keyword, extract structured product data (price, rating, reviews, sales indicator, etc.), and filter results against configurable thresholds. No AI scoring, no other marketplaces, no CAPTCHA/login bypass.",
+  "version": "1.0",
+  "input": "./input_schema.json",
+  "dockerfile": "./Dockerfile",
+  "readme": "../README.md"
+}
